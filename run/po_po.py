@@ -5,7 +5,7 @@ import re
 import time
 
 from keyboard_backlight_control import *
-#from ColorConstants import colors
+from ColorConstants import *
 """
 
 colors{'purple':'FF00FF',
@@ -16,66 +16,87 @@ colors{'purple':'FF00FF',
         orange:''}
 """
 
-colors = {'purple':'FF00FF',
-            'blue':'0000FF',
-             'red':'FF0000',
-           'green':'0FF00D',
-            'teal':'0FF0FF',
-         'magenta':'F00FFF',
-          'burntorange':'FF0F0F',
-          'yellow':'FFFF00',
-          'orange':'FF8C00',
-          'orangered':'FF4500',
-          'whiteDim':'202020',
-          'whiteBright' :'FFFFFF',
-          'off':'000000'}
+#colors = {'purple':'FF00FF',
+#          'aliceblue':'F0F8FF',
+#            'blue':'0000FF',
+#             'red':'FF0000',
+#           'green':'0FF00D',
+#           'darkgreen':'006400',
+#            'teal':'0FF0FF',
+#         'magenta':'F00FFF',
+#          'burntorange':'FF0F0F',
+#          'yellow':YELLOW1,
+#          'orange':'FF8C00',
+#          'orangered':'FF4500',
+#          'whiteDim':'202020',
+#          'whiteBright' :'FFFFFF',
+#          'off':'000000'}
+#
+#def set_state_off(color_ctrl):
+#    color_ctrl.set_list([Color('000000'), Color('202020'), Color('000000')])
+#
+#def set_state_a(color_ctrl):
+#    color_ctrl.set_list([Color('0000FF'), Color('202000'), Color('000000')])
+#
+#def set_state_b(color_ctrl):
+#    color_ctrl.set_list([Color('000000'), Color('002020'), Color('FF0000')])
+#
+## blue left, red right
+#def set_state_blueLeft_redRight(color_ctrl):
+#    color_ctrl.set_list([Color('0000FF'), Color('002020'), Color('FF0000')])
+#
+## blue left, greem middle, green right
+#def set_state_BlueGreenGreen(color_ctrl):
+#    color_ctrl.set_list([Color('0000FF'), Color('6DD000'), Color('0FF000')])
+#
+#
+#def set_state_BlueGreenRed(color_ctrl):
+#    color_ctrl.set_list([Color('0000FF'), Color('0FF000'), Color('FF0000')])
+#
+#
+#def set_state_BlueRedGreen(color_ctrl):
+#    color_ctrl.set_list([Color('0000FF'), Color('FF0000'), Color('0FF000')])
+#
+#
+#def set_state_BlueGreenPurple(color_ctrl):
+#    color_ctrl.set_list([Color('0000FF'), Color('0FF00D'), Color('FF00FF')])
+#
+#def set_state_PurpleBlueGreen(color_ctrl):
+#    color_ctrl.set_list([Color('FF00FF'), Color('0000FF'), Color('0FF00D')])
+#
+#
+#def set_state_RedBlueGreen(color_ctrl):
+#    color_ctrl.set_list([Color('FF0000'), Color('0000FF'), Color('0FF00D')])
+#
+#
+#def set_state_RedGreenBlue(color_ctrl):
+#    color_ctrl.set_list([Color('FF0000'), Color('0FF00D'), Color('0000FF')])
 
-def set_state_off(color_ctrl):
-    color_ctrl.set_list([Color('000000'), Color('202020'), Color('000000')])
-
-def set_state_a(color_ctrl):
-    color_ctrl.set_list([Color('0000FF'), Color('202000'), Color('000000')])
-
-def set_state_b(color_ctrl):
-    color_ctrl.set_list([Color('000000'), Color('002020'), Color('FF0000')])
-
-# blue left, red right
-def set_state_blueLeft_redRight(color_ctrl):
-    color_ctrl.set_list([Color('0000FF'), Color('002020'), Color('FF0000')])
-
-# blue left, greem middle, green right
-def set_state_BlueGreenGreen(color_ctrl):
-    color_ctrl.set_list([Color('0000FF'), Color('6DD000'), Color('0FF000')])
 
 
-def set_state_BlueGreenRed(color_ctrl):
-    color_ctrl.set_list([Color('0000FF'), Color('0FF000'), Color('FF0000')])
+# blue green theme
+def set_blueGreenTheme(color_ctrl):
+    color_ctrl.set_list([
+                        Color(COBALT), 
+                        Color(CHARTREUSE1), 
+                        Color(COBALT) 
+                        ])
 
+# orange meditation DARKORANGE
+def set_orangeOrangeTheme(color_ctrl):
+    color_ctrl.set_list([
+                        Color(ORANGERED1), 
+                        Color(RED1), 
+                        Color(YELLOW2) 
+                        ])
 
-def set_state_BlueRedGreen(color_ctrl):
-    color_ctrl.set_list([Color('0000FF'), Color('FF0000'), Color('0FF000')])
-
-
-def set_state_BlueGreenPurple(color_ctrl):
-    color_ctrl.set_list([Color('0000FF'), Color('0FF00D'), Color('FF00FF')])
-
-def set_state_PurpleBlueGreen(color_ctrl):
-    color_ctrl.set_list([Color('FF00FF'), Color('0000FF'), Color('0FF00D')])
-
-
-def set_state_RedBlueGreen(color_ctrl):
-    color_ctrl.set_list([Color('FF0000'), Color('0000FF'), Color('0FF00D')])
-
-
-def set_state_RedGreenBlue(color_ctrl):
-    color_ctrl.set_list([Color('FF0000'), Color('0FF00D'), Color('0000FF')])
-
-
-# blue left, greem middle, purple right
 def set_state_TEST(color_ctrl):
-    color_ctrl.set_list([Color(colors['blue']), 
-                        Color(colors['green']), 
-                        Color(colors['yellow'])])
+    color_ctrl.set_list([
+                        Color(COBALT), 
+                        Color(CHARTREUSE1), 
+                        Color(COBALT) 
+                        ])
+
 
 
 def run():
@@ -83,7 +104,7 @@ def run():
     color_ctrl = factory.color_ctrl()
     
     #call to set the color scheme:
-    set_state_TEST(color_ctrl)
+    set_orangeOrangeTheme(color_ctrl)
 
 #    while True:
 #        for f in [set_state_a, set_state_b]:
