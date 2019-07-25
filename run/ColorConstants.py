@@ -7,9 +7,10 @@ Color = namedtuple('RGB','red, green, blue')
 colors = {} #dict of colors
 
 class RGB(Color):
-def hex_format(self):
-'''Returns color in hex format'''
-return '#{:02X}{:02X}{:02X}'.format(self.red,self.green,self.blue)
+    def hex_format(self):
+        '''Returns color in hex format'''
+        return '#{:02X}{:02X}{:02X}'.format(self.red,self.green,self.blue)
+        #return '{:02X}{:02X}{:02X}'.format(self.red,self.green,self.blue)
 
 #Color Contants
 ALICEBLUE = RGB(240, 248, 255)
