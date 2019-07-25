@@ -90,6 +90,21 @@ def set_orangeOrangeTheme(color_ctrl):
                         Color(YELLOW2) 
                         ])
 
+# red green blue
+def set_redGreenBlueTheme(color_ctrl):
+    color_ctrl.set_list([
+                        Color(RED1), 
+                        Color(GREEN1), 
+                        Color(DEEPSKYBLUE4) 
+                        ])
+# red white blue
+def set_redGreenWhiteTheme(color_ctrl):
+    color_ctrl.set_list([
+                        Color(RED1), 
+                        Color(WHITE), 
+                        Color(ROYALBLUE1) 
+                        ])
+
 def set_state_TEST(color_ctrl):
     color_ctrl.set_list([
                         Color(COBALT), 
@@ -104,7 +119,7 @@ def run():
     color_ctrl = factory.color_ctrl()
     
     #call to set the color scheme:
-    set_orangeOrangeTheme(color_ctrl)
+    set_redGreenBlueTheme(color_ctrl)
 
 #    while True:
 #        for f in [set_state_a, set_state_b]:
