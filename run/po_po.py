@@ -113,13 +113,20 @@ def set_state_TEST(color_ctrl):
                         ])
 
 
+# CO blue yellow red
+def set_COLORADOTheme(color_ctrl):
+    color_ctrl.set_list([
+                        Color(BLUE), 
+                        Color(YELLOW3), 
+                        Color(RED2) 
+                        ])
 
 def run():
     factory = Factory()
     color_ctrl = factory.color_ctrl()
     
     #call to set the color scheme:
-    set_redGreenBlueTheme(color_ctrl)
+    set_COLORADOTheme(color_ctrl)
 
 #    while True:
 #        for f in [set_state_a, set_state_b]:
