@@ -120,13 +120,19 @@ def set_COLORADOTheme(color_ctrl):
                         Color(YELLOW3), 
                         Color(RED2) 
                         ])
+def set_COLORADOThemeR(color_ctrl):
+    color_ctrl.set_list([
+                        Color(RED1), 
+                        Color(YELLOW3), 
+                        Color(BLUE) 
+                        ])
 
 def run():
     factory = Factory()
     color_ctrl = factory.color_ctrl()
     
     #call to set the color scheme:
-    set_COLORADOTheme(color_ctrl)
+    set_COLORADOThemeR(color_ctrl)
 
 #    while True:
 #        for f in [set_state_a, set_state_b]:
