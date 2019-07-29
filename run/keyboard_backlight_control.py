@@ -34,6 +34,7 @@ class Path:
         return self.cache
 
     def set(self, value):
+        print 'tlm path\n:',self.path,"\n DONE"
         if self.readonly:
             raise AssertionError('tried to write to readonly file ' + self.path)
         if not os.access(self.path, os.W_OK):
