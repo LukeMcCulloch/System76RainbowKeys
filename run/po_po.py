@@ -120,11 +120,21 @@ def set_COLORADOTheme(color_ctrl):
                         Color(YELLOW3), 
                         Color(RED2) 
                         ])
+
 def set_COLORADOThemeR(color_ctrl):
+    #source: https://www.schemecolor.com/colorado-flag-usa.php
     color_ctrl.set_list([
-                        Color(RED1), 
-                        Color(YELLOW3), 
-                        Color(BLUE) 
+                        Color(COREDmod), 
+                        Color(COGOLD), 
+                        Color(COBLACK) 
+                        ])
+
+def set_COLORADOThemeR2(color_ctrl):
+    #source: https://www.color-hex.com/color-palette/54435
+    color_ctrl.set_list([
+                        Color(COREDmod), 
+                        Color(COGOLD2), 
+                        Color(COBLUE2) 
                         ])
 
 def run():
@@ -132,7 +142,7 @@ def run():
     color_ctrl = factory.color_ctrl()
     
     #call to set the color scheme:
-    set_COLORADOThemeR(color_ctrl)
+    set_COLORADOThemeR2(color_ctrl)
 
 #    while True:
 #        for f in [set_state_a, set_state_b]:
