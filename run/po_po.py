@@ -132,17 +132,30 @@ def set_COLORADOThemeR(color_ctrl):
 def set_COLORADOThemeR2(color_ctrl):
     #source: https://www.color-hex.com/color-palette/54435
     color_ctrl.set_list([
-                        Color(COREDmod), 
+                        Color(CORED2), 
                         Color(COGOLD2), 
                         Color(COBLUE2) 
                         ])
+
+# source: https://www.colorado.gov/pacific/sites/default/files/atoms/files/CO_BrandGuidelines_1014-Web.pdf
+# nothing there
+
+
+def set_COLORADOThemeR_tlm(color_ctrl):
+    #source: https://www.color-hex.com/color-palette/54435
+    color_ctrl.set_list([
+                        Color(RED3), 
+                        Color(COGOLD), 
+                        Color(COBLACK) 
+                        ])
+
 
 def run():
     factory = Factory()
     color_ctrl = factory.color_ctrl()
     
     #call to set the color scheme:
-    set_COLORADOThemeR2(color_ctrl)
+    set_COLORADOThemeR_tlm(color_ctrl)
 
 #    while True:
 #        for f in [set_state_a, set_state_b]:
