@@ -155,7 +155,9 @@ def run():
     color_ctrl = factory.color_ctrl()
     
     #call to set the color scheme:
-    set_COLORADOThemeR_tlm(color_ctrl)
+    set_redGreenBlueTheme(color_ctrl)
+    #set_redGreenBlueTheme(color_ctrl)
+    #set_COLORADOThemeR_tlm(color_ctrl)
 
 #    while True:
 #        for f in [set_state_a, set_state_b]:
